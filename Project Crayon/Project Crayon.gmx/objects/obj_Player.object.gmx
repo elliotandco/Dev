@@ -49,25 +49,27 @@ phy_fixed_rotation = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*left
-if keyboard_check (vk.left) {
-    phy_position_x += 4;
+            <string>//left
+if (keyboard_check (vk_left)) {
+     hspeed = -4;
 }
 
 //up
-if keyboard_check (vk.up) {
-    phy_position_y -= 4;
+if (keyboard_check (vk_up)) {
+    vspeed = +4;
 }
 
 //right
-if keyboard_check (vk.right) {
-    phy_position_x -= 4;
+if (keyboard_check (vk_right)) {
+    hspeed = +4;
 }
 
 //down
-if keyboard_check (vk.down) {
-    phy_position_y -= 4;
+if (keyboard_check (vk_down)) {
+    vspeed = -4;
 }
+
+
 </string>
           </argument>
         </arguments>
