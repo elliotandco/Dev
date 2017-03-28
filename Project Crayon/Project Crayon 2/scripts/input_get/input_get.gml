@@ -5,10 +5,12 @@ move_up = keyboard_check(vk_up);
 move_down = keyboard_check(vk_down);
 move_left = keyboard_check(vk_left);
 move_right = keyboard_check(vk_right);
+move_dash = keyboard_check(ord("C"));
 
 if(gamepad_is_connected(dvc)){
 	move_up = gamepad_axis_value(dvc, gp_axislv)<-0.3;
 	move_down = gamepad_axis_value(dvc, gp_axislv)>0.3;
 	move_left = gamepad_axis_value(dvc, gp_axislh)<-0.3;
 	move_right = gamepad_axis_value(dvc, gp_axislh)>0.3;
+	move_dash = gamepad_button_check(dvc, gp_face1);
 }

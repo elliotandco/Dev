@@ -59,6 +59,9 @@ y += vspd;
 */
 
 //move animation
+
+
+
 if(abs(hspd)<abs(vspd)){
 	if(vspd<0){sprite_index=sprite_u}
 	if(vspd>0){sprite_index=sprite_d}
@@ -69,6 +72,14 @@ if(abs(hspd)>abs(vspd)){
 	if(hspd>0){sprite_index=sprite_r}
 }
 
+
+/*
+if(abs(hspd>0) & abs(vspd>0)){
+	if(move_dash)
+	{sprite_index=sprite_dr_dash}
+	} else {sprite_index=sprite_dr}
+		
+*/
 
 if(abs(hspd>0) & abs(vspd>0))
 	{sprite_index=sprite_dr}
@@ -82,6 +93,28 @@ if(abs(hspd<0) & abs(vspd>0))
 if(abs(hspd>0) & abs(vspd<0))
 	{sprite_index=sprite_ur}
 
+if(abs(hspd>0) && abs(vspd>0 && move_dash))
+	{sprite_index=sprite_dr_dash}
+	
+if(abs(hspd<0) & abs(vspd<0 && move_dash))
+	{sprite_index=sprite_ul_dash}
+
+if(abs(hspd<0) & abs(vspd>0 && move_dash))
+	{sprite_index=sprite_dl_dash
+	alarm_set(0, 1)}
+	
+if(abs(hspd>0) & abs(vspd<0 && move_dash))
+	{sprite_index=sprite_ur_dash}
+	
+if(abs(hspd)<abs(vspd) && move_dash){
+	if(vspd<0){sprite_index=sprite_u_dash}
+	if(vspd>0){sprite_index=sprite_d_dash}
+}
+
+if(abs(hspd)>abs(vspd) && move_dash){
+	if(hspd<0){sprite_index=sprite_l_dash}
+	if(hspd>0){sprite_index=sprite_r_dash}
+}
 	
 
 /*
