@@ -322,7 +322,7 @@
             "Key": "dec490fe-105a-4251-9a5e-595d675af0f0",
             "Value": {
                 "id": "5de8f797-b838-45e5-af7b-90de5160a2be",
-                "resourcePath": "sprites\\sprite_ul_1\\sprite_ul_1.yy",
+                "resourcePath": "sprites\\sprite_idle\\sprite_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
